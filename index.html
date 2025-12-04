@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FlashSale — Limited Time Offer</title>
+  <meta name="description" content="Limited-time FlashSale for Lumen Home — premium smart devices at huge discounts. Sign up & buy now!">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#6ee7b7; --muted:#98a2b3; --glass: rgba(255,255,255,0.03);
+      --max-w:1100px; --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,#071028 0%, #071827 60%);color:#e6eef8;line-height:1.45}
+    .wrap{max-width:var(--max-w);margin:28px auto;padding:24px}
+
+    /* Header */
+    header{display:flex;gap:20px;align-items:center;justify-content:space-between}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#34d399);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042027}
+    .logo h1{font-size:1.125rem;margin:0}
+    nav{display:flex;gap:12px}
+    .btn{background:var(--accent);color:#042027;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+
+    /* Top ad banner */
+    .ad-top{margin:18px 0;border-radius:12px;background:var(--glass);padding:10px;display:flex;align-items:center;justify-content:center;border:2px dashed rgba(110,231,183,0.15)}
+    .ad-top small{color:var(--muted)}
+
+    /* Main grid */
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:20px}
+
+    /* Hero */
+    .hero{display:flex;gap:20px;align-items:center}
+    .hero .left{flex:1}
+    .tag{display:inline-block;background:rgba(110,231,183,0.12);color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:700;margin-bottom:12px}
+    .hero h2{margin:0 0 12px 0;font-size:2rem}
+    .price{display:flex;gap:12px;align-items:baseline}
+    .price .old{color:var(--muted);text-decoration:line-through}
+    .price .new{font-size:1.75rem;color:var(--accent);font-weight:800}
+    .features{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .feature{background:rgba(255,255,255,0.02);padding:10px;border-radius:10px;font-size:0.9rem}
+
+    /* CTA and form */
+    .cta-row{margin-top:18px;display:flex;gap:12px}
+    .signup{display:flex;gap:8px}
+    input[type=email]{padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;min-width:200px}
+
+    /* Sidebar ad */
+    .ad-box{border-radius:12px;padding:12px;background:var(--glass);border:2px dashed rgba(255,255,255,0.04);text-align:center}
+    .ad-label{font-size:0.85rem;color:var(--muted);margin-bottom:8px}
+
+    /* Products */
+    .products{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+    .product{padding:12px;border-radius:12px;background:rgba(255,255,255,0.01)}
+    .product h4{margin:0 0 8px 0}
+    .buy{background:#063c2a;padding:10px;border-radius:8px;color:var(--accent);text-decoration:none;display:inline-block;font-weight:700}
+
+    /* inline ad */
+    .ad-inline{margin:18px 0;padding:14px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:2px dashed rgba(255,255,255,0.03);text-align:center}
+
+    /* Testimonials */
+    .testimonials{display:flex;gap:12px;margin-top:18px}
+    .test{flex:1;padding:12px;border-radius:10px;background:rgba(255,255,255,0.01)}
+
+    /* Footer ad */
+    footer{margin-top:20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .ad-footer{flex:1;padding:12px;border-radius:10px;background:var(--glass);border:2px dashed rgba(255,255,255,0.03);text-align:center}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .products{grid-template-columns:1fr}
+      .hero h2{font-size:1.5rem}
+    }
+
+    /* helper small */
+    .muted{color:var(--muted);font-size:0.9rem}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="mark">LS</div>
+        <div>
+          <h1>FlashSale</h1>
+          <div class="muted">Limited time — up to 60% off</div>
+        </div>
+      </div>
+      <nav>
+        <a class="muted" href="#features">Features</a>
+        <a class="muted" href="#products">Products</a>
+        <a class="btn" href="#buy">Buy Now</a>
+      </nav>
+    </header>
+
+    <!-- TOP AD: Replace content of #ad-top with ad image or ad script -->
+    <div id="ad-top" class="ad-top card">
+      <div>
+        <div style="font-weight:700">Ad space — Top banner (728×90)</div>
+        <small class="muted">Replace this element with your ad code or image. ID: #ad-top</small>
+      </div>
+    </div>
+
+    <main class="grid">
+      <section class="card">
+        <div class="hero">
+          <div class="left">
+            <div class="tag">HOT DEAL</div>
+            <h2>Save BIG on Lumen Home — Smart Lighting Kit</h2>
+            <p class="muted">Connect, automate and save energy. Perfect for modern homes and first-time smart buyers.</p>
+            <div class="price">
+              <div class="old">₹7,999</div>
+              <div class="new">₹2,999</div>
+              <div class="muted">(Limited stock)</div>
+            </div>
+
+            <div class="features">
+              <div class="feature">Voice control — Alexa & Google</div>
+              <div class="feature">Energy saver mode</div>
+              <div class="feature">No hub required</div>
+            </div>
+
+            <div class="cta-row">
+              <a id="buy" class="btn" href="#" onclick="buyNow(event)">Buy Now — ₹2,999</a>
+              <div class="signup">
+                <input id="email" type="email" placeholder="Enter your email" aria-label="email">
+                <a class="btn" href="#" onclick="signup(event)">Notify Me</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="right" style="width:260px;min-width:200px;text-align:center">
+            <div style="background:linear-gradient(135deg,#072a2e,#05202b);padding:18px;border-radius:12px">
+              <img alt="product" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><rect width='100%' height='100%' fill='%230b1220' rx='12'/><text x='50%' y='50%' fill='%23ffffff' font-size='16' font-family='Arial' text-anchor='middle' dy='.35em'>Product Image</text></svg>" style="width:100%;border-radius:8px;display:block;margin-bottom:10px">
+              <div class="muted">Smart Bulb Kit — 4 pieces</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INLINE AD: replace #ad-inline-1 with ad content -->
+        <div id="ad-inline-1" class="ad-inline">
+          <div style="font-weight:700">Ad space — Inline (468×60 or responsive)</div>
+          <div class="muted">Replace element with ad script / image. ID: #ad-inline-1</div>
+        </div>
+
+        <h3 id="features">Why Lumen Home?</h3>
+        <p class="muted">Designed for easy setup and robust performance. Comes with 1-year warranty and priority support.</p>
+
+        <div class="products" id="products">
+          <article class="product">
+            <h4>Starter Kit</h4>
+            <p class="muted">4 bulbs + controller</p>
+            <div class="muted">₹2,999</div>
+            <a class="buy" href="#" onclick="buyNow(event)">Buy</a>
+          </article>
+
+          <article class="product">
+            <h4>Pro Kit</h4>
+            <p class="muted">8 bulbs + smart switch</p>
+            <div class="muted">₹5,499</div>
+            <a class="buy" href="#" onclick="buyNow(event)">Buy</a>
+          </article>
+
+          <article class="product">
+            <h4>Single Bulb</h4>
+            <p class="muted">High-lumen, low-energy</p>
+            <div class="muted">₹799</div>
+            <a class="buy" href="#" onclick="buyNow(event)">Buy</a>
+          </article>
+
+          <article class="product">
+            <h4>Accessory Pack</h4>
+            <p class="muted">Mounts and controllers</p>
+            <div class="muted">₹499</div>
+            <a class="buy" href="#" onclick="buyNow(event)">Buy</a>
+          </article>
+        </div>
+
+        <!-- INLINE AD 2 -->
+        <div id="ad-inline-2" class="ad-inline">
+          <div style="font-weight:700">Ad space — Medium Rectangle (300×250)</div>
+          <div class="muted">Replace element with ad script / image. ID: #ad-inline-2</div>
+        </div>
+
+        <h3>What customers say</h3>
+        <div class="testimonials">
+          <div class="test">"Easy to install — saved so much energy." — Asha</div>
+          <div class="test">"Great value for money." — Rohit</div>
+        </div>
+
+      </section>
+
+      <aside>
+        <div class="card ad-box">
+          <div class="ad-label">Sidebar Ad — 300×250</div>
+          <div id="ad-sidebar" style="padding:12px;border-radius:8px;background:rgba(255,255,255,0.01);min-height:200px;display:flex;align-items:center;justify-content:center;flex-direction:column">
+            <div style="font-weight:700">Ad space — Sidebar (300×250)</div>
+            <div class="muted">Replace element with ad script or image. ID: #ad-sidebar</div>
+          </div>
+        </div>
+
+        <div style="height:20px"></div>
+
+        <div class="card">
+          <h4>Quick specs</h4>
+          <ul class="muted">
+            <li>Wi‑Fi: 2.4 GHz</li>
+            <li>Power: 9W</li>
+            <li>Warranty: 1 year</li>
+          </ul>
+        </div>
+
+        <div style="height:20px"></div>
+
+        <div class="card">
+          <h4>Secure checkout</h4>
+          <p class="muted">SSL, trusted payment partners, easy returns.</p>
+        </div>
+      </aside>
+    </main>
+
+    <!-- FOOTER AD -->
+    <footer>
+      <div class="ad-footer" id="ad-footer">
+        <div style="font-weight:700">Footer Ad — 970×90 (or responsive)</div>
+        <div class="muted">Replace element with ad script or image. ID: #ad-footer</div>
+      </div>
+      <div style="min-width:220px;text-align:right">
+        <div class="muted">© FlashSale 2025</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Simple handlers — replace with your real purchase flow
+    function buyNow(e){
+      e.preventDefault();
+      alert('Purchase flow: this is a demo CTA. Replace buyNow() with real checkout integration.');
+    }
+    function signup(e){
+      e.preventDefault();
+      var em = document.getElementById('email').value;
+      if(!em || em.indexOf('@')===-1){alert('Enter a valid email');return}
+      alert('Thank you! We will notify ' + em);
+    }
+
+    /*
+      How to insert real ads:
+      - Option A: Replace element innerHTML with an <img> or your ad <script> from your ad network.
+         Example: document.getElementById('ad-top').innerHTML = '<img src="/path/to/ad.jpg" alt="ad">';
+      - Option B: Use ad network script that requires a div placeholder. Keep IDs (#ad-top, #ad-sidebar, #ad-inline-1, #ad-inline-2, #ad-footer).
+      - Option C: For server-side ad injection, render the ad markup into these elements when serving the page.
+
+      Sizes/IDs summary:
+        #ad-top         -> banner (728x90)
+        #ad-inline-1    -> inline banner (468x60) or responsive
+        #ad-inline-2    -> medium rectangle (300x250)
+        #ad-sidebar     -> sidebar rectangle (300x250)
+        #ad-footer      -> footer banner (970x90 or responsive)
+    */
+  </script>
+</body>
+</html>
