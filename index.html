@@ -24,11 +24,11 @@
     .btn{background:var(--accent);color:#042027;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
 
     /* Top ad banner */
-    .ad-top{margin:18px 0;border-radius:12px;background:var(--glass);padding:10px;display:flex;align-items:center;justify-content:center;border:2px dashed rgba(110,231,183,0.15)}
+    .ad-top{margin:18px 0;border-radius:12px;background:var(--glass);padding:10px;display:flex;align-items:center;justify-content:center;border:2px dashed rgba(110,231,183,0.15);max-width:100%;overflow:hidden;flex-wrap:wrap;text-align:center}
     .ad-top small{color:var(--muted)}
 
     /* Main grid */
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:20px;align-items:flex-start}
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:20px}
 
     /* Hero */
@@ -70,7 +70,21 @@
 
     /* Responsive */
     @media (max-width:900px){
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      nav{width:100%;justify-content:flex-start;flex-wrap:wrap}
       .grid{grid-template-columns:1fr}
+      aside{order:2}
+      section.card{order:1}
+      .products{grid-template-columns:1fr}
+      .hero{flex-direction:column}
+      .hero h2{font-size:1.5rem}
+    }
+
+    @media (max-width:600px){
+      .cta-row{flex-direction:column;align-items:stretch}
+      .signup{flex-direction:column;width:100%}
+      input[type=email]{width:100%}
+    }
       .products{grid-template-columns:1fr}
       .hero h2{font-size:1.5rem}
     }
